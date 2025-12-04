@@ -9,13 +9,13 @@ export default function Contact() {
     {
       icon: "✉️", 
       title: "Email",
-      value: "info@surfingpoint.com",
-      link: "mailto:info@surfingpoint.com"
+      value: "surfingpointmeerut@gmail.com",
+      link: "mailto:surfingpointmeerut@gmail.com"
     },
     {
       icon: "📍",
       title: "Address", 
-      value: "123 Business District, Suite 456\nNew York, NY 10001",
+      value: "Ashok Ki Lath, Subhash Bazar, Meerut, Uttar Pradesh 250002.",
       link: "https://maps.app.goo.gl/QHQmF5MB3FRYUYxG9"
     }
   ];

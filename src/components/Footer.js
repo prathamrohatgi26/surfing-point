@@ -54,9 +54,9 @@ export default function Footer() {
               <div className="flex items-start">
                 <span className="mr-3 mt-1">📍</span>
                 <div>
-                  <div>123 Business District</div>
-                  <div>Suite 456, Floor 3</div>
-                  <div>New York, NY 10001</div>
+                  <div>Ashok Ki Lath, Subhash Bazar,</div>
+                  <div>Meerut, Uttar Pradesh,</div>
+                  <div>250002</div>
                 </div>
               </div>
             </div>

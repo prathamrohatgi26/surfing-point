@@ -37,9 +37,9 @@ export default function Hero() {
               <div className="text-left">
                 <div className="text-gray-700 text-lg sm:text-xl">
                   <p className="text-2xl font-bold text-gray-900 mb-3">Surfing Point</p>
-                  <p className="mb-2">123 Business District</p>
-                  <p className="mb-2">Suite 456, Floor 3</p>
-                  <p className="mb-4">New York, NY 10001</p>
+                  <p className="mb-2">Ashok Ki Lath, Subhash Bazar,</p>
+                  <p className="mb-2">Meerut, Uttar Pradesh,</p>
+                  <p className="mb-4">250002</p>
                 </div>
               </div>
               
@@ -51,7 +51,9 @@ export default function Hero() {
                   </div>
                   <div className="flex items-center">
                     <span className="text-2xl mr-3">✉️</span>
-                    <span className="text-blue-600 font-bold text-lg sm:text-xl">info@surfingpoint.com</span>
+                    <a href="mailto:surfingpointmeerut@gmail.com" className="text-blue-600 font-bold text-lg sm:text-xl">
+                      surfingpointmeerut@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
