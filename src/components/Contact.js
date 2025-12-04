@@ -21,16 +21,16 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-800 via-gray-900 to-black">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-linear-to-br from-gray-800 via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Touch</span>
+            Get In <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-400">Touch</span>
           </h2>
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Ready to get started? Contact us today for all your service needs.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-linear-to-r from-blue-400 to-indigo-400 mx-auto mt-6"></div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
