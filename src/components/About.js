@@ -48,7 +48,7 @@ export default function About() {
         <div className="mt-20 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">5000+</div>
               <div className="text-lg text-gray-700">Happy Customers</div>
             </div>
             <div>
