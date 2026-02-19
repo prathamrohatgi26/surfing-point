@@ -47,7 +47,7 @@ export default function Hero() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <span className="text-2xl mr-3">📞</span>
-                    <span className="text-blue-600 font-bold text-lg sm:text-xl">8979914623</span>
+                    <a href="tel:+918979914623" className="text-blue-600 font-bold text-lg sm:text-xl hover:text-blue-800 transition-colors">+91 8979914623</a>
                   </div>
                   <div className="flex items-center">
                     <span className="text-2xl mr-3">✉️</span>

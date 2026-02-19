@@ -11,18 +11,21 @@ export default function Footer() {
             <p className="text-gray-400 mb-6 text-lg leading-relaxed">
               Your trusted partner for all your service needs. We provide comprehensive solutions for travel ticketing, insurance, digital signature, passport services, and online works.
             </p>
-            <div className="flex space-x-4">
-              <a href="tel:8979914623" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Phone</span>
-                📞
+            <div className="flex flex-wrap gap-3">
+              <a href="#services" className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all duration-300">
+                <span>✈️</span> Travel
               </a>
-              <a href="mailto:info@surfingpoint.com" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Email</span>
-                ✉️
+              <a href="#services" className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all duration-300">
+                <span>🛡️</span> Insurance
               </a>
-              <a href="https://maps.app.goo.gl/QHQmF5MB3FRYUYxG9" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Location</span>
-                📍
+              <a href="#services" className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all duration-300">
+                <span>✍️</span> Digital Signature
+              </a>
+              <a href="#services" className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all duration-300">
+                <span>📘</span> Passport
+              </a>
+              <a href="#services" className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all duration-300">
+                <span>💻</span> Online Works
               </a>
             </div>
           </div>
@@ -45,11 +48,11 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center">
                 <span className="mr-3">📞</span>
-                <a href="tel:8979914623" className="hover:text-white transition-colors">8979914623</a>
+                <a href="tel:+918979914623" className="hover:text-white transition-colors">+91 8979914623</a>
               </div>
               <div className="flex items-center">
                 <span className="mr-3">✉️</span>
-                <a href="mailto:info@surfingpoint.com" className="hover:text-white transition-colors">info@surfingpoint.com</a>
+                <a href="mailto:surfingpointmeerut@gmail.com" className="hover:text-white transition-colors">surfingpointmeerut@gmail.com</a>
               </div>
               <div className="flex items-start">
                 <span className="mr-3 mt-1">📍</span>
@@ -67,7 +70,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm sm:text-base mb-4 md:mb-0">
-              © 2024 Surfing Point. All rights reserved.
+              © {new Date().getFullYear()} Surfing Point. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a>

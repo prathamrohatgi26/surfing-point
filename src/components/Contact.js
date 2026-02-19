@@ -3,8 +3,8 @@ export default function Contact() {
     {
       icon: "📞",
       title: "Phone",
-      value: "8979914623",
-      link: "tel:8979914623"
+      value: "+91 8979914623",
+      link: "tel:+918979914623"
     },
     {
       icon: "✉️", 

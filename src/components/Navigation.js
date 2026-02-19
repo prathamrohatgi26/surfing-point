@@ -10,13 +10,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm shadow-lg border-b sticky top-0 z-50">
+    <nav aria-label="Main navigation" className="bg-white/95 backdrop-blur-sm shadow-lg border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h1 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            <span className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
               Surfing Point
-            </h1>
+            </span>
           </div>
           
           {/* Desktop Navigation */}
@@ -30,15 +30,17 @@ export default function Navigation() {
             <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
               Contact
             </a>
-            <a href="tel:8979914623" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            <a href="tel:+918979914623" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
               Call Now
             </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button 
+            <button
               onClick={toggleMenu}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +80,7 @@ export default function Navigation() {
                 Contact
               </a>
               <a 
-                href="tel:8979914623" 
+                href="tel:+918979914623" 
                 className="block px-3 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
