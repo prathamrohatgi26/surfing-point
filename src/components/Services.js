@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Services() {
   const services = [
     {
@@ -8,7 +10,7 @@ export default function Services() {
         "Domestic & International flights",
         "Hotel reservations", 
         "Travel packages",
-        "24/7 customer support"
+        "Dedicated customer support"
       ],
       color: "blue"
     },
@@ -61,6 +63,19 @@ export default function Services() {
       color: "teal"
     },
     {
+      icon: "🌐",
+      title: "Websites & Landing Pages",
+      description: "We design and build professional websites and landing pages to take your business online.",
+      features: [
+        "Business websites",
+        "Landing pages",
+        "Mobile-friendly design",
+        "Google & WhatsApp integration"
+      ],
+      color: "sky",
+      link: { href: "/website-development", label: "Learn more" }
+    },
+    {
       icon: "🔧",
       title: "Additional Services",
       description: "We offer a wide range of additional services to meet all your requirements.",
@@ -81,7 +96,8 @@ export default function Services() {
       purple: "from-purple-50 to-purple-100 border-purple-200",
       orange: "from-orange-50 to-orange-100 border-orange-200",
       teal: "from-teal-50 to-teal-100 border-teal-200",
-      indigo: "from-indigo-50 to-indigo-100 border-indigo-200"
+      indigo: "from-indigo-50 to-indigo-100 border-indigo-200",
+      sky: "from-sky-50 to-sky-100 border-sky-200"
     };
     return colors[color] || colors.blue;
   };
@@ -91,19 +107,19 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Services</span>
+            Our <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Services</span>
           </h2>
           <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             We provide comprehensive solutions for all your service needs
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-indigo-600 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`bg-gradient-to-br ${getColorClasses(service.color)} border border-opacity-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2`}
+              className={`w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] bg-linear-to-br ${getColorClasses(service.color)} border p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2`}
             >
               <div className="text-5xl mb-6 text-center">{service.icon}</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
@@ -118,6 +134,14 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {service.link && (
+                <Link
+                  href={service.link.href}
+                  className="inline-block mt-6 text-blue-600 font-semibold hover:text-indigo-600 hover:translate-x-1 transition-all duration-300"
+                >
+                  {service.link.label} →
+                </Link>
+              )}
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,14 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://surfingpoint.com"),
+  metadataBase: new URL(site.url),
   title: {
-    default: "Surfing Point Meerut - Travel Ticketing, Insurance, Digital Signature & Passport Services",
+    default: "Surfing Point Meerut | Travel, Insurance, DSC & Websites",
     template: "%s | Surfing Point Meerut",
   },
-  description: "Surfing Point Meerut - Your trusted partner for travel ticketing, insurance services, digital signature (DSC), passport applications, visa assistance, and all types of online works. Located at Ashok Ki Lath, Subhash Bazar, Meerut. Call +91 8979914623.",
+  description: "Travel tickets, insurance, digital signature (DSC), passport help, online works and business websites in Subhash Bazar, Meerut. Call +91 8979914623.",
   keywords: [
     "Surfing Point Meerut",
+    "website development Meerut",
+    "landing page design Meerut",
+    "business website Meerut",
+    "website design Meerut",
+    "web designer Meerut",
+    "website designing company Meerut",
+    "website for small business Meerut",
+    "landing page for business",
+    "mobile friendly website design",
     "travel ticketing Meerut",
     "flight booking Meerut",
     "insurance services Meerut",
@@ -55,44 +65,32 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Surfing Point Meerut - Travel, Insurance, Digital Signature & Passport Services",
-    description: "Professional travel ticketing, insurance, digital signature, passport services, and online works in Meerut. Your trusted partner for all service needs. Call +91 8979914623.",
-    url: "https://surfingpoint.com",
+    title: "Surfing Point Meerut - Travel, Insurance, DSC, Passport & Website Design",
+    description: "Professional travel ticketing, insurance, digital signature, passport services, online works, and website & landing page design for businesses in Meerut. Your trusted partner for all service needs. Call +91 8979914623.",
+    url: site.url,
     siteName: "Surfing Point",
     locale: "en_IN",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Surfing Point - Travel, Insurance, Digital Signature & Passport Services in Meerut",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Surfing Point Meerut - Complete Service Solutions",
-    description: "Travel ticketing, insurance, digital signature, passport services & online works in Meerut. Call +91 8979914623.",
-    images: ["/og-image.jpg"],
-  },
-  verification: {
-    google: "your-google-verification-code",
+    title: "Surfing Point Meerut - Travel, Insurance, DSC, Passport & Website Design",
+    description: "Travel ticketing, insurance, digital signature, passport services, online works & business websites in Meerut. Call +91 8979914623.",
   },
   alternates: {
-    canonical: "https://surfingpoint.com",
+    canonical: site.url,
   },
   other: {
     "geo.region": "IN-UP",
     "geo.placename": "Meerut",
-    "geo.position": "28.9845;77.7064",
-    "ICBM": "28.9845, 77.7064",
+    "geo.position": `${site.geo.latitude};${site.geo.longitude}`,
+    "ICBM": `${site.geo.latitude}, ${site.geo.longitude}`,
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

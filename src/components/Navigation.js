@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { whatsappLink } from '@/lib/site';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,24 +16,27 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <span className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            <Link href="/" className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600 hover:opacity-80 transition-opacity">
               Surfing Point
-            </span>
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
+            <a href="/#services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
               Services
             </a>
-            <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
+            <Link href="/website-development" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
+              Websites
+            </Link>
+            <a href="/#about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
               About
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
+            <a href="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors font-medium text-lg">
               Contact
             </a>
-            <a href="tel:+918979914623" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-              Call Now
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="bg-green-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors">
+              WhatsApp
             </a>
           </div>
 
@@ -59,32 +64,41 @@ export default function Navigation() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               <a 
-                href="#services" 
+                href="/#services" 
                 className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </a>
+              <Link 
+                href="/website-development" 
+                className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Websites
+              </Link>
               <a 
-                href="#about" 
+                href="/#about" 
                 className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a 
-                href="#contact" 
+                href="/#contact" 
                 className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </a>
-              <a 
-                href="tel:+918979914623" 
-                className="block px-3 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Call Now
+                WhatsApp
               </a>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import { site } from '@/lib/site';
+
 export default function robots() {
   return {
     rules: [
@@ -6,6 +8,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://surfingpoint.com/sitemap.xml',
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }
