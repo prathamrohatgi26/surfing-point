@@ -1,22 +1,25 @@
+import { site, fullAddress } from '@/lib/site';
+import WhatsApp from '@/components/WhatsApp';
+
 export default function Contact() {
   const contactInfo = [
     {
       icon: "📞",
       title: "Phone",
-      value: "+91 8979914623",
-      link: "tel:+918979914623"
+      value: site.phone.display,
+      link: site.phone.href
     },
     {
       icon: "✉️", 
       title: "Email",
-      value: "surfingpointmeerut@gmail.com",
-      link: "mailto:surfingpointmeerut@gmail.com"
+      value: site.email.display,
+      link: site.email.href
     },
     {
       icon: "📍",
       title: "Address", 
-      value: "Ashok Ki Lath, Subhash Bazar, Meerut, Uttar Pradesh 250002.",
-      link: "https://maps.app.goo.gl/QHQmF5MB3FRYUYxG9"
+      value: fullAddress,
+      link: site.mapsUrl
     }
   ];
 
@@ -46,11 +49,7 @@ export default function Contact() {
                     rel={info.title === "Address" ? "noopener noreferrer" : undefined}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
-                    {info.title === "Address" ? (
-                      <div className="whitespace-pre-line">{info.value}</div>
-                    ) : (
-                      <div>{info.value}</div>
-                    )}
+                    <div className="break-words">{info.value}</div>
                   </a>
                 ) : (
                   <p className="text-gray-300">{info.value}</p>
@@ -59,6 +58,8 @@ export default function Contact() {
             </div>
           ))}
         </div>
+
+        <WhatsApp />
       </div>
     </section>
   );

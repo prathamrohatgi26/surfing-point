@@ -1,28 +1,17 @@
+import { site } from '@/lib/site';
+
+// Section anchors (#services etc.) aren't separate URLs, so only real routes are listed.
 export default function sitemap() {
   return [
     {
-      url: 'https://surfingpoint.com',
-      lastModified: new Date(),
+      url: site.url,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://surfingpoint.com/#services',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      url: `${site.url}/website-development`,
+      changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: 'https://surfingpoint.com/#about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://surfingpoint.com/#contact',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
   ];
 }
